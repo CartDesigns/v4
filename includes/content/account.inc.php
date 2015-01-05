@@ -27,14 +27,11 @@ $account->assign('TXT_PERSONAL_INFO', $lang['account']['personal_info']);
 $account->assign('TXT_ORDER_HISTORY', $lang['account']['order_history']);
 $account->assign('TXT_CHANGE_PASSWORD', $lang['account']['change_password']);
 $account->assign('TXT_NEWSLETTER', $lang['account']['newsletter']);
-$account->assign('LANG_LOGIN_REQUIRED', $lang['account']['login_to_view']);
 
 if ($cc_session->ccUserData['customer_id']>0) {
-	$account->parse('account.session_true');
+	$account->parse('account');
+	$page_content = $account->text('account');
 } else {
-	$account->parse('account.session_false');
+	httpredir('index.php?_a=login&amp;redir='.urlencode(str_replace('&amp;','&',currentPage())));
 }
-
-$account->parse('account');
-$page_content = $account->text('account');
 ?>
