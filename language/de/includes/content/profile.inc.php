@@ -23,7 +23,6 @@ ${$lv}['profile'] = array(
 'phone' => "Tel.:",
 'mobile' => "Handy:",
 'update_account' => "Konto aktualisieren",
-'login_required' => "Sie m&uuml;ssen angemeldet sein um diese Seite anzuzeigen.",
 'incomplete_ppdetails' => "PayPal kam nicht zurück, alle erforderlichen Daten an die Kasse abzuschließen. Bitte aktualisieren Sie Ihr Profil unten, bevor Sie fortfahren."
 );
 ?>

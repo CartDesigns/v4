@@ -23,7 +23,6 @@ ${$lv}['profile'] = array(
 'phone' => "Telefone:",
 'mobile' => "Telem&oacute;vel:",
 'update_account' => "Actualizar Conta ",
-'login_required' => "Deve fazer o login para ver esta p&aacute;gina.",
 'incomplete_ppdetails' => "PayPal keerde niet terug alle gegevens die nodig zijn om het betalingsproces te voltooien. Werk uw profiel hieronder voordat u verdergaat."
 );
 ?>

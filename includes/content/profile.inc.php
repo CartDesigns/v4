@@ -114,14 +114,14 @@ if($_GET['ppupdate']) {
 
 if (isset($updateAcc) && $updateAcc) {
 	$profile->assign('LANG_PROFILE_DESC',$lang['profile']['account_updated']);
-	$profile->parse('profile.session_true.no_error');
+	$profile->parse('profile.no_error');
 
 } else if(isset($errorMsg)) {
 	$profile->assign('VAL_ERROR',$errorMsg);
-	$profile->parse('profile.session_true.error');
+	$profile->parse('profile.error');
 } else {
 	$profile->assign('LANG_PROFILE_DESC',$lang['profile']['edit_below']);
-	$profile->parse('profile.session_true.no_error');
+	$profile->parse('profile.no_error');
 }
 
 if ($cc_session->ccUserData['customer_id'] > 0 || $cc_session->ccUserData[0]['customer_id'] > 0) {
@@ -201,7 +201,7 @@ if ($cc_session->ccUserData['customer_id'] > 0 || $cc_session->ccUserData[0]['cu
 		}
 
 		$profile->assign('VAL_DEL_COUNTY_NAME',$countyName);
-		$profile->parse('profile.session_true.county_opts');
+		$profile->parse('profile.county_opts');
 	}
 	// end: Flexible Taxes
 
@@ -230,7 +230,7 @@ if ($cc_session->ccUserData['customer_id'] > 0 || $cc_session->ccUserData[0]['cu
 		}
 
 		$profile->assign('VAL_COUNTRY_NAME',$countryName);
-		$profile->parse('profile.session_true.country_opts');
+		$profile->parse('profile.country_opts');
 
 	}
 
@@ -244,13 +244,10 @@ if ($cc_session->ccUserData['customer_id'] > 0 || $cc_session->ccUserData[0]['cu
 
 	$profile->assign('TXT_SUBMIT',$lang['profile']['update_account']);
 
-	$profile->parse('profile.session_true');
+	$profile->parse('profile');
+	$page_content = $profile->text('profile');
 
 } else {
-	$profile->assign('LANG_LOGIN_REQUIRED',$lang['profile']['login_required']);
-	$profile->parse('profile.session_false');
+	httpredir('index.php?_a=login&amp;redir='.urlencode(str_replace('&amp;','&',currentPage())));
 }
-
-$profile->parse('profile');
-$page_content = $profile->text('profile');
 ?>

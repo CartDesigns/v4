@@ -2,7 +2,6 @@
 {JS_COUNTY_OPTIONS}
 	<div class="txtContentTitle">{LANG_PERSONAL_INFO_TITLE}</div>
 	<div class="boxContent">
-	<!-- BEGIN: session_true -->
 	<!-- BEGIN: no_error -->
 	<p>{LANG_PROFILE_DESC}</p>
 	<!-- END: no_error -->
@@ -85,12 +84,7 @@
 				  <td><input name="submit" type="submit" value="{TXT_SUBMIT}" class="txtButton" /></td>
 			  </tr>
 		</table>
-	</form>
-	<!-- END: session_true -->
-	
-	<!-- BEGIN: session_false -->
-	<p>{LANG_LOGIN_REQUIRED}</p>
-	<!-- END: session_false -->
+	</form>	
 
 </div>
 <!-- END: profile -->

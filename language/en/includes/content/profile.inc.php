@@ -23,7 +23,6 @@ ${$lv}['profile'] = array(
 'phone' => "Telephone:",
 'mobile' => "Cellphone:",
 'update_account' => "Update Account",
-'login_required' => "You must login to view this page.",
 'incomplete_ppdetails' => "PayPal did not return all the data required to complete the checkout process. Please update your profile below before continuing."
 );
 ?>

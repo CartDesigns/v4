@@ -4,7 +4,6 @@
 
 	<span class="txtContentTitle">{LANG_PERSONAL_INFO_TITLE}</span>
 	
-	<!-- BEGIN: session_true -->
 	<!-- BEGIN: no_error -->
 	<p>{LANG_PROFILE_DESC}</p>
 	<!-- END: no_error -->
@@ -88,11 +87,6 @@
 			  </tr>
 		</table>
 	</form>
-	<!-- END: session_true -->
-	
-	<!-- BEGIN: session_false -->
-	<p>{LANG_LOGIN_REQUIRED}</p>
-	<!-- END: session_false -->
 
 </div>
 <!-- END: profile -->

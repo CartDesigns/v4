@@ -23,7 +23,6 @@ ${$lv}['profile'] = array(
 'phone' => "Telefoon:",
 'mobile' => "GSM:",
 'update_account' => "Account bijwerken",
-'login_required' => "Je moet ingelogd zijn om deze pagina te bekijken.",
 'incomplete_ppdetails' => "PayPal keerde niet terug alle gegevens die nodig zijn om het betalingsproces te voltooien. Werk uw profiel hieronder voordat u verdergaat."
 );
 ?>

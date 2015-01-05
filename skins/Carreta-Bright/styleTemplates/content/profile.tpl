@@ -2,7 +2,6 @@
 <div id="ContentBox">
 {JS_COUNTY_OPTIONS}
 <div class="Title"><h1>{LANG_PERSONAL_INFO_TITLE}</h1></div>
-<!-- BEGIN: session_true -->
 <!-- BEGIN: no_error -->
 <p>{LANG_PROFILE_DESC}</p>
 <!-- END: no_error -->
@@ -96,9 +95,5 @@
 <div class="Button"><input name="submit" type="submit" value="{TXT_SUBMIT}" class="submit" /></div>
 </div>
 </form>
-<!-- END: session_true -->
-<!-- BEGIN: session_false -->
-<p>{LANG_LOGIN_REQUIRED}</p>
-<!-- END: session_false -->
 </div>
 <!-- END: profile -->
