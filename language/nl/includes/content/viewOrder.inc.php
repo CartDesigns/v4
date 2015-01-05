@@ -25,7 +25,6 @@ ${$lv}['viewOrder'] = array(
 'shipping' => "Verzenden:",
 'grand_total' => "Eindtotaal:",
 'order_not_found' => "Dit ordernummer kon niet teruggevonden worden.",
-'login_required' => "Je moet ingelogd zijn om deze pagina te kunnen bekijken.",
 'make_payment' => "De orderstatus is momenteel &quot;Openstaande Betaling&quot; Als je dit nog niet gedaan hebt kan je nu verdergaan <a href='%1\$s' class='txtDefault'>betaling uitvoeren</a> . Wanneer de betaling ontvangen wordt zal je order verzonden worden."
 );
 ?>

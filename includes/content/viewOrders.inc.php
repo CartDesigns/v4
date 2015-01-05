@@ -19,14 +19,16 @@
 
 if(!defined('CC_INI_SET')){ die("Access Denied"); }
 
-// include lang file
 
-$lang = getLang('includes'.CC_DS.'content'.CC_DS.'viewOrders.inc.php');
-$lang = getLang('orders.inc.php');
+if($cc_session->ccUserData['customer_id']>0) {
 
-// query database
+	// include lang file
+	$lang = getLang('includes'.CC_DS.'content'.CC_DS.'viewOrders.inc.php');
+	$lang = getLang('orders.inc.php');
 
-$view_orders=new XTemplate ('content'.CC_DS.'viewOrders.tpl');
+	// query database
+
+	$view_orders=new XTemplate ('content'.CC_DS.'viewOrders.tpl');
 
 	$view_orders->assign('LANG_YOUR_VIEW_ORDERS',$lang['viewOrders']['your_orders']);
 
@@ -56,39 +58,35 @@ $view_orders=new XTemplate ('content'.CC_DS.'viewOrders.tpl');
 
 			if (!empty($orders[$i]['courier_tracking'])) {
 				$view_orders->assign('TRACKING_URL', $orders[$i]['courier_tracking']);
-				$view_orders->parse('view_orders.session_true.orders_true.repeat_orders.courier_tracking');
+				$view_orders->parse('view_orders.orders_true.repeat_orders.courier_tracking');
 			}
 
 			if (in_array($orders[$i]['status'], array(1,4))) {
 				$view_orders->assign('LANG_COMPLETE_PAYMENT',$lang['viewOrders']['complete_payment']);
-				$view_orders->parse('view_orders.session_true.orders_true.repeat_orders.make_payment');
+				$view_orders->parse('view_orders.orders_true.repeat_orders.make_payment');
 
 			}
 
-			$view_orders->parse('view_orders.session_true.orders_true.repeat_orders');
+			$view_orders->parse('view_orders.orders_true.repeat_orders');
 
 		}
 
 		for ($i=1; $i<=6; ++$i) {
 			$view_orders->assign('LANG_ORDER_STATUS',$lang['glob']['orderState_'.$i]);
 			$view_orders->assign('LANG_ORDER_STATUS_DESC',$lang['glob']['orderState_'.$i.'_desc']);
-			$view_orders->parse('view_orders.session_true.orders_true.repeat_status');
+			$view_orders->parse('view_orders.orders_true.repeat_status');
 
 		}
-		$view_orders->parse('view_orders.session_true.orders_true');
+		$view_orders->parse('view_orders.orders_true');
 	} else {
 		$view_orders->assign('LANG_NO_ORDERS',$lang['viewOrders']['no_orders']);
-		$view_orders->parse('view_orders.session_true.orders_false');
+		$view_orders->parse('view_orders.orders_false');
 	}
-
-
-	$view_orders->assign('LANG_LOGIN_REQUIRED',$lang['viewOrders']['login_required']);
-
-	if($cc_session->ccUserData['customer_id']>0) $view_orders->parse('view_orders.session_true');
-
-	else $view_orders->parse('view_orders.session_false');
 
 	$view_orders->parse('view_orders');
 
-$page_content = $view_orders->text('view_orders');
+	$page_content = $view_orders->text('view_orders');
+} else {
+		httpredir('index.php?_a=login&amp;redir='.urlencode(str_replace('&amp;','&',currentPage())));
+}
 ?>

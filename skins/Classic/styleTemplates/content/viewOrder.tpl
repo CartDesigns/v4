@@ -3,7 +3,6 @@
 	
 	<span class="txtContentTitle">{LANG_YOUR_VIEW_ORDER}</span>
 	
-	<!-- BEGIN: session_true -->
 	<div>	
 		<!-- BEGIN: order_true -->
 		<p>{LANG_ORDER_LIST}</p>
@@ -127,12 +126,7 @@
 		<!-- BEGIN: order_false -->
 		<p>{LANG_NO_ORDERS}</p>
 		<!-- END: order_false -->
-	</div>
-	<!-- END: session_true -->
-	
-	<!-- BEGIN: session_false -->
-	<p>{LANG_LOGIN_REQUIRED}</p>
-	<!-- END: session_false -->
+	</div>	
 			
 </div>
 <!-- END: view_order -->

@@ -25,7 +25,6 @@ ${$lv}['viewOrder'] = array(
 'shipping' => "Spedizione:",
 'grand_total' => "Totale Generale:",
 'order_not_found' => "Non &egrave; stato possibile trovare quel numero d'ordine.",
-'login_required' => "Devi fare login per visionare questa pagina.",
 'make_payment' => "Questo ordine &egrave; attualmente &quot;Pagamento in Sospeso&quot; se non lo hai gi&agrave; fatto puoi continuare <a href='%1\$s' class='txtDefault'> per saldare il pagamento</a> adesso. Una volta ricevuto il pagamento, il tuo ordine verr&agrave; evaso."
 );
 ?>

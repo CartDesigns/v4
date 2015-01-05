@@ -10,7 +10,6 @@ ${$lv}['viewOrders'] = array(
 'view' => "Visiona Ordine",
 'courier_tracking' => 'Rintraccia Ordine',
 'complete_payment' => "Effettua Pagamento",
-'no_orders' => "Non abbiamo alcuna traccia di alcun ordine piazzato nel nostro sistema. Se ritieni che questo sia un errore contatta un nostro addetto alla prima occasione.",
-'login_required' => "Devi fare login per visionare questa pagine."
+'no_orders' => "Non abbiamo alcuna traccia di alcun ordine piazzato nel nostro sistema. Se ritieni che questo sia un errore contatta un nostro addetto alla prima occasione."
 );
 ?>

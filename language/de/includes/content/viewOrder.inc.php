@@ -25,7 +25,6 @@ ${$lv}['viewOrder'] = array(
 'shipping' => "Versand:",
 'grand_total' => "Gesamtsumme:",
 'order_not_found' => "Die Bestellnummer wurde nicht gefunden.",
-'login_required' => "Sie m&uuml;ssen angemeldet sein um diese Seite anzuzeigen.",
 'make_payment' => "Diese Bestellung zeigt den Status &quot;Bezahlung ausstehend&quot; falls Sie die Bezahlung noch nicht ausgef&uuml;hrt haben, k&ouml;nnen Sie es hiermit <a href='%1\$s' class='txtDefault'>Bezahlung ausf&uuml;hren</a> jetzt tun. Ihre Bestellung wird bearbeitet, sobald Ihre Bezahlung eingegangen ist."
 );
 ?>

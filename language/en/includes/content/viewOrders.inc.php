@@ -10,7 +10,6 @@ ${$lv}['viewOrders'] = array(
 'view' => "View Order",
 'courier_tracking' => 'Track Order',
 'complete_payment' => "Complete Payment",
-'no_orders' => "We have no records of any orders placed in our system. If you feel this is in error please contact a member of staff at the first possible opportunity.",
-'login_required' => "You must login to view this page."
+'no_orders' => "We have no records of any orders placed in our system. If you feel this is in error please contact a member of staff at the first possible opportunity."
 );
 ?>

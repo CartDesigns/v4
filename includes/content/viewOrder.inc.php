@@ -19,9 +19,12 @@
 
 if(!defined('CC_INI_SET')){ die("Access Denied"); }
 
-// include lang file
-$lang = getLang('includes'.CC_DS.'content'.CC_DS.'viewOrder.inc.php');
-$lang = getLang('orders.inc.php');
+
+if($cc_session->ccUserData['customer_id']>0) {
+
+	// include lang file
+	$lang = getLang('includes'.CC_DS.'content'.CC_DS.'viewOrder.inc.php');
+	$lang = getLang('orders.inc.php');
 
 	$view_order=new XTemplate (CC_DS.'content'.CC_DS.'viewOrder.tpl');
 
@@ -33,7 +36,7 @@ $lang = getLang('orders.inc.php');
 
 		if (in_array($order[0]['status'], array(1,4))) {
 			$view_order->assign('LANG_MAKE_PAYMENT',sprintf($lang['viewOrder']['make_payment'],'index.php?_g=co&amp;_a=step3&amp;cart_order_id='.$_GET['cart_order_id']));
-			$view_order->parse('view_order.session_true.order_true.make_payment');
+			$view_order->parse('view_order.order_true.make_payment');
 
 		}
 
@@ -92,7 +95,7 @@ $lang = getLang('orders.inc.php');
 				if($download) {
 					$view_order->assign('VAL_DOWNLOAD_LINK',$glob['storeURL'].'/index.php?_g=dl&amp;pid='.$download[0]['productId'].'&oid='.base64_encode($_GET['cart_order_id']).'&ak='.$download[0]['accessKey']);
 					$view_order->assign('LANG_DOWNLOAD_LINK',$lang['viewOrder']['download_here']);
-					$view_order->parse('view_order.session_true.order_true.repeat_products.digital_link');
+					$view_order->parse('view_order.order_true.repeat_products.digital_link');
 				}
 
 			}
@@ -104,7 +107,7 @@ $lang = getLang('orders.inc.php');
 			$view_order->assign('VAL_IND_QUANTITY',$products[$i]['quantity']);
 			$view_order->assign('VAL_IND_PROD_CODE',$products[$i]['productCode']);
 			$view_order->assign('VAL_IND_PRICE',priceFormat($products[$i]['price'],true));
-			$view_order->parse('view_order.session_true.order_true.repeat_products');
+			$view_order->parse('view_order.order_true.repeat_products');
 
 		}
 
@@ -143,24 +146,20 @@ $lang = getLang('orders.inc.php');
 		$view_order->assign('LANG_GRAND_TOTAL',$lang['viewOrder']['grand_total']);
 		$view_order->assign('VAL_GRAND_TOTAL',priceFormat($order[0]['prod_total'],true));
 
-		$view_order->parse('view_order.session_true.order_true');
+		$view_order->parse('view_order.order_true');
 
 	}
 	else
 	{
 		$view_order->assign('LANG_NO_ORDERS',$lang['viewOrder']['order_not_found']);
-		$view_order->parse('view_order.session_true.order_false');
+		$view_order->parse('view_order.order_false');
 
 	}
 
-
-	$view_order->assign('LANG_LOGIN_REQUIRED',$lang['viewOrder']['login_required']);
-
-	if($cc_session->ccUserData['customer_id']>0) $view_order->parse('view_order.session_true');
-
-	else $view_order->parse('view_order.session_false');
-
 	$view_order->parse('view_order');
 
-$page_content = $view_order->text('view_order');
+	$page_content = $view_order->text('view_order');
+} else {
+		httpredir('index.php?_a=login&amp;redir='.urlencode(str_replace('&amp;','&',currentPage())));
+	}
 ?>

@@ -25,7 +25,6 @@ ${$lv}['viewOrder'] = array(
 'shipping' => "Forsendelse:",
 'grand_total' => "Totalt:",
 'order_not_found' => "Ordrenummeret ble ikke funnet.",
-'login_required' => "Du m&aring; logge inn for &aring; se denne siden.",
 'make_payment' => "Det ventes p&aring; betaling for denne ordren. Dersom du ikke allerede har betalt s&aring; kan du <a href='%1\$s' class='txtDefault'>fullf&oslash;re betalingen</a> n&aring;. N&aring;r betalingen har blitt mottatt vil ordren prosesseres."
 );
 ?>

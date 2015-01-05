@@ -1,7 +1,6 @@
 <!-- BEGIN: view_orders -->
 <div id="ContentBox">
 <div class="Title"><h1>{LANG_YOUR_VIEW_ORDERS}</h1></div>
-<!-- BEGIN: session_true -->
 <!-- BEGIN: orders_true -->
 <p>{LANG_ORDER_LIST}</p>
 
@@ -36,9 +35,5 @@
 <!-- BEGIN: orders_false -->
 <p>{LANG_NO_ORDERS}</p>
 <!-- END: orders_false -->
-<!-- END: session_true -->
-<!-- BEGIN: session_false -->
-<p>{LANG_LOGIN_REQUIRED}</p>
-<!-- END: session_false -->
 </div>
 <!-- END: view_orders -->

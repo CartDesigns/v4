@@ -10,7 +10,6 @@ ${$lv}['viewOrders'] = array(
 'view' => "Ver Pedido",
 'courier_tracking' => 'Rastrear Pedido',
 'complete_payment' => "Completar Pago",
-'no_orders' => "No tenemos registros de ning&uacute;n pedido realizado en nuestro sistema. Si considera que esto es un error, por favor contacte a un miembro del equipo en cuanto le sea posible.",
-'login_required' => "Debe acceder para ver esta p&aacute;gina."
+'no_orders' => "No tenemos registros de ning&uacute;n pedido realizado en nuestro sistema. Si considera que esto es un error, por favor contacte a un miembro del equipo en cuanto le sea posible."
 );
 ?>

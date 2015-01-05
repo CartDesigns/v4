@@ -3,7 +3,6 @@
 	
 	<span class="txtContentTitle">{LANG_YOUR_VIEW_ORDERS}</span>
 	
-	<!-- BEGIN: session_true -->
 	<div>	
 		<!-- BEGIN: orders_true -->
 		<p>{LANG_ORDER_LIST}</p>
@@ -45,11 +44,7 @@
 		<p>{LANG_NO_ORDERS}</p>
 		<!-- END: orders_false -->
 	</div>
-	<!-- END: session_true -->
 	
-	<!-- BEGIN: session_false -->
-	<p>{LANG_LOGIN_REQUIRED}</p>
-	<!-- END: session_false -->
 			
 </div>
 <!-- END: view_orders -->

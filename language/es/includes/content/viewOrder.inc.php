@@ -25,7 +25,6 @@ ${$lv}['viewOrder'] = array(
 'shipping' => "Env&iacute;o:",
 'grand_total' => "Total Final:",
 'order_not_found' => "No se pudo encontrar ese n&uacute;mero de pedido.",
-'login_required' => "Debe acceder para ver esta p&aacute;gina.",
 'make_payment' => "Este pedido est&aacute; actualmente &quot;Pendiente de Pago&quot; si no lo ha hecho todav&iacute;a, puede <a href='%1\$s' class='txtDefault'>completar el pago</a> ahora. Una vez se hubiera recibido el pago, su pedido ser&aacute; completado."
 );
 ?>
