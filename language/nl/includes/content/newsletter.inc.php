@@ -9,7 +9,6 @@ ${$lv}['newsletter'] = array(
 'plain_text' => "Platte Tekst",
 'html' => "HTML",
 'html_abbr' => "Hypertext Markup Language",
-'update' => "Bijwerken",
-'login_required' => "Je moet ingelogd zijn om deze pagina te bekijken."
+'update' => "Bijwerken"
 );
 ?>

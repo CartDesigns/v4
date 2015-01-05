@@ -77,14 +77,11 @@ $newsletter = new XTemplate ('content'.CC_DS.'newsletter.tpl');
 
 		$newsletter->assign('TXT_SUBMIT',$lang['newsletter']['update']);
 
-		$newsletter->parse('newsletter.session_true');
+		$newsletter->parse('newsletter');
+		$page_content = $newsletter->text('newsletter');
 
 	} else {
-		$newsletter->assign('LANG_LOGIN_REQUIRED',$lang['newsletter']['login_required']);
-		$newsletter->parse('newsletter.session_false');
-
+		httpredir('index.php?_a=login&amp;redir='.urlencode(str_replace('&amp;','&',currentPage())));
 	}
 
-	$newsletter->parse('newsletter');
-$page_content = $newsletter->text('newsletter');
 ?>

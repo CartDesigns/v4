@@ -3,7 +3,6 @@
 
 	<span class="txtContentTitle">{LANG_NEWSLETTER_TITLE}</span>
 	
-	<!-- BEGIN: session_true -->
 	<p>{LANG_NEWSLETTER_DESC}</p>
 	
 		<form action="index.php?_a=newsletter" target="_self" method="post">
@@ -35,11 +34,6 @@
 			  </tr>
 		</table>
 	</form>
-	<!-- END: session_true -->
-	
-	<!-- BEGIN: session_false -->
-	<p>{LANG_LOGIN_REQUIRED}</p>
-	<!-- END: session_false -->
 
 </div>
 <!-- END: newsletter -->

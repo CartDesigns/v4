@@ -9,7 +9,6 @@ ${$lv}['newsletter'] = array(
 'plain_text' => "Klartext",
 'html' => "HTML",
 'html_abbr' => "Hypertext Markup Language",
-'update' => "Aktualisieren",
-'login_required' => "Sie m&uuml;ssen angemeldet sein um diese Seite anzuzeigen."
+'update' => "Aktualisieren"
 );
 ?>

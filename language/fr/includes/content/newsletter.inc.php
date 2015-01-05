@@ -9,7 +9,6 @@ ${$lv}['newsletter'] = array(
 'plain_text' => "Texte en clair",
 'html' => "HTML",
 'html_abbr' => "Langage de balisage hypertexte",
-'update' => "Actualisation",
-'login_required' => "Vous devez ouvrir la session pour afficher cette page."
+'update' => "Actualisation"
 );
 ?>

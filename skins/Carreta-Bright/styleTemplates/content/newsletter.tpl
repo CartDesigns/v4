@@ -1,7 +1,6 @@
 <!-- BEGIN: newsletter -->
 <div id="ContentBox">
 <div class="Title"><h1>{LANG_NEWSLETTER_TITLE}</h1></div>
-<!-- BEGIN: session_true -->
 <p>{LANG_NEWSLETTER_DESC}</p>
 <form action="index.php?_a=newsletter" target="_self" method="post">
 <table border="0" cellspacing="0" cellpadding="3" align="center">
@@ -28,10 +27,5 @@
 <div class="ButtonRt"><input name="submit" type="submit" value="{TXT_SUBMIT}" class="submit" /></div>
 </div>
 </form>
-<!-- END: session_true -->
-	
-<!-- BEGIN: session_false -->
-<p>{LANG_LOGIN_REQUIRED}</p>
-<!-- END: session_false -->
 </div>
 <!-- END: newsletter -->

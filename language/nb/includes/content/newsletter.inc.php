@@ -9,7 +9,6 @@ ${$lv}['newsletter'] = array(
 'plain_text' => "Ren tekst",
 'html' => "HTML",
 'html_abbr' => "Hypertext Markup Language",
-'update' => "Oppdater",
-'login_required' => "Du m&aring; logge inn for &aring; se denne siden."
+'update' => "Oppdater"
 );
 ?>
