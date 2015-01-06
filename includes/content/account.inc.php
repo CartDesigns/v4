@@ -18,17 +18,20 @@
 */
 
 if (!defined('CC_INI_SET')) die("Access Denied");
-$lang = getLang('includes'.CC_DS.'content'.CC_DS.'account.inc.php');
 
-$account = new XTemplate ('content'.CC_DS.'account.tpl');
-
-$account->assign('LANG_YOUR_ACCOUNT', $lang['account']['your_account']);
-$account->assign('TXT_PERSONAL_INFO', $lang['account']['personal_info']);
-$account->assign('TXT_ORDER_HISTORY', $lang['account']['order_history']);
-$account->assign('TXT_CHANGE_PASSWORD', $lang['account']['change_password']);
-$account->assign('TXT_NEWSLETTER', $lang['account']['newsletter']);
 
 if ($cc_session->ccUserData['customer_id']>0) {
+
+	$lang = getLang('includes'.CC_DS.'content'.CC_DS.'account.inc.php');
+
+	$account = new XTemplate ('content'.CC_DS.'account.tpl');
+
+	$account->assign('LANG_YOUR_ACCOUNT', $lang['account']['your_account']);
+	$account->assign('TXT_PERSONAL_INFO', $lang['account']['personal_info']);
+	$account->assign('TXT_ORDER_HISTORY', $lang['account']['order_history']);
+	$account->assign('TXT_CHANGE_PASSWORD', $lang['account']['change_password']);
+	$account->assign('TXT_NEWSLETTER', $lang['account']['newsletter']);
+
 	$account->parse('account');
 	$page_content = $account->text('account');
 } else {

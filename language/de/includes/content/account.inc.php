@@ -5,7 +5,6 @@ ${$lv}['account'] = array(
 'personal_info' => "Pers&ouml;nliche Daten",
 'order_history' => "Bestellhistorie",
 'change_password' => "Passwort &auml;ndern",
-'newsletter' => "Newsletter",
-'login_to_view' => "Sie m&uuml;ssen sich anmelden um diese Seite anzuzeigen."
+'newsletter' => "Newsletter"
 );
 ?>

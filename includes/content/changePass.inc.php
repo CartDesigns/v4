@@ -106,9 +106,7 @@ $change_pass = new XTemplate ('content'.CC_DS.'changePass.tpl');
 
 	} elseif(!$updatePassword) {
 
-		$lang = getLang('includes'.CC_DS.'content'.CC_DS.'account.inc.php');
-		$change_pass->assign('LANG_LOGIN_REQUIRED',$lang['account']['login_to_view']);
-		$change_pass->parse('change_pass.session_false');
+		httpredir('index.php?_a=login&amp;redir='.urlencode(str_replace('&amp;','&',currentPage())));
 
 	}
 

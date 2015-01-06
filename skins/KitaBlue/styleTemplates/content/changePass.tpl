@@ -35,9 +35,6 @@
 	<!-- END: form -->
 	<!-- END: session_true -->
 	
-	<!-- BEGIN: session_false -->
-	<p>{LANG_LOGIN_REQUIRED}</p>
-	<!-- END: session_false -->
 
 </div>
 <!-- END: change_pass -->

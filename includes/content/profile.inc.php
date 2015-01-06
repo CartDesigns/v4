@@ -243,11 +243,12 @@ if ($cc_session->ccUserData['customer_id'] > 0 || $cc_session->ccUserData[0]['cu
 	$profile->assign('VAL_MOBILE',$cc_session->ccUserData['mobile']);
 
 	$profile->assign('TXT_SUBMIT',$lang['profile']['update_account']);
-
+	
 	$profile->parse('profile');
 	$page_content = $profile->text('profile');
 
 } else {
 	httpredir('index.php?_a=login&amp;redir='.urlencode(str_replace('&amp;','&',currentPage())));
 }
+
 ?>
