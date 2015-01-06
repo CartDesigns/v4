@@ -86,9 +86,10 @@
 		  <option value="{VAL_DEL_COUNTY_ID}" {COUNTY_SELECTED}>{VAL_DEL_COUNTY_NAME}</option>
 		  <!-- END: county_opts -->
 		  </select>
+		  <input name="which_field" type="hidden" id="which_field" value="{VAL_COUNTY_WHICH_FIELD}" /> {ICON_REQUIRED}
 		</div>
-		<input name="which_field" type="hidden" id="which_field" value="{VAL_COUNTY_WHICH_FIELD}" />
-		{ICON_REQUIRED}</td>
+		
+		</td>
 	  </tr>
 	  <tr>
 		<td colspan="4" class="tdcartTitle">{LANG_SECURITY_DETAILS}</td>
